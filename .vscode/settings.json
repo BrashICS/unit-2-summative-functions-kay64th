@@ -41,5 +41,6 @@
     },
     "workbench.editorAssociations": {   
         "*.md": "vscode.markdown.preview.editor"
-    }
+    },
+    "livePreview.defaultPreviewPath": "/test.html"
 }

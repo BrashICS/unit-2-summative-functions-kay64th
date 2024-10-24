@@ -1,61 +1,91 @@
-<!-- index.html -->
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Helper 📐</title>
+    <link rel="icon" href="./images/favicon.png" sizes="any" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1>
+        <img class="heading_img" src="./images/geometry.png" width="32px">
+         Geometry Helper 
+        <img class="heading_img" src="./images/geometry.png" width="32px">
+    </h1>
+    
+    <h3>Use the tools below to help with your math!</h3>
 
-<html>
-    <head>
-        <title>Geometry Helper 📐</title>
-        <link rel="icon" href="./images/favicon.png" sizes="any" type="image/png">
-        <link rel="stylesheet" href="./style.css">
-        <script src="./main.js" defer></script>
-    </head>
 
-    <body>
-        <h1>
-            <img class="heading_img" src="./images/geometry.png" width="32px">
-             Geometry Helper 
-            <img class="heading_img" src="./images/geometry.png" width="32px">
-        </h1>
+    <h2>Rectangular Prism</h2>
+    <label for="length">Length:</label>
+    <input type="number" id="length"><br>
+    
+    <label for="width">Width:</label>
+    <input type="number" id="width"><br>
+    
+    <label for="height">Height:</label>
+    <input type="number" id="height"><br>
 
-        <h3>Use the tools below to help with your math!</h3>
-        
-        <p>
-            Round answers to the nearest
-            <input type="number" id="rounding" value="4" placeholder="0" min="0" max="10"  class="short_number">
-            decimals.
-        </p>
+    <label for="rounding">Rounding (decimals):</label>
+    <input type="number" id="rounding"><br>
+    
+    <button onclick="rect_prism_volume()">Rectangular Prism Volume</button>
+    <div id="volumeOutput"></div>
+    
+    <button onclick="rect_prism_area()">Rectangular Prism Area</button>
+    <div id="areaOutput"></div>
 
-        <hr>
-        
-        <!-- Geometry -->
-        <div>
-            <h4>Part 1 - Geometry</h4>
-            
-        </div>
-        
-        <hr>
+    <h2>Sphere</h2>
+    <label for="radius">Radius:</label>
+    <input type="number" id="radius"><br>
+    
+    <button onclick="sphere_volume()">Sphere Volume</button>
+    <div id="sphereVolumeOutput"></div>
+    
+    <button onclick="sphere_area()">Sphere Area</button>
+    <div id="sphereAreaOutput"></div>
 
-        <!-- Quadratics -->
-        <div>
-            <h4>Part 2 - Quadratics</h4>
-            <p>
-                Enter the values of "a", "b", and "c" of a quadratic in standard form:
-            </p>
-            
-            <label for="a">a:</label>
-            <input id="a" name="a" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-            <label for="b">b:</label>
-            <input id="b" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
-            <label for="c">c:</label>
-            <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+    <h2>Triangle</h2>
+    <label for="base">Base:</label>
+    <input type="number" id="base"><br>
+    
+    <label for="heightTriangle">Height:</label>
+    <input type="number" id="heightTriangle"><br>
+    
+    <button onclick="triangle_area()">Triangle Area</button>
+    <div id="triangleAreaOutput"></div>
 
-            <button id="zeros">Find the Zeros</button> 
-            <button id="vertex">Find the Vertex</button>
+    <h2>Shortest Distance from a Point to a Line</h2>
+    <label for="slope">Slope (m):</label>
+    <input type="number" id="slope"><br>
+    
+    <label for="yIntercept">Y-Intercept (b):</label>
+    <input type="number" id="yIntercept"><br>
+    
+    <label for="pointX">Point X:</label>
+    <input type="number" id="pointX"><br>
+    
+    <label for="pointY">Point Y:</label>
+    <input type="number" id="pointY"><br>
+    
+    <button onclick="shortest_distance()">Calculate Shortest Distance</button>
+    <div id="distanceOutput"></div>
 
-            <!-- Output for the zeros or vertex -->
-            <div id="quadratic_output"></div>
-        </div>
+    <h2>Quadratic Functions</h2>
+    <label for="a">Coefficient a:</label>
+    <input type="number" id="a"><br>
 
-        
+    <label for="b">Coefficient b:</label>
+    <input type="number" id="b"><br>
 
-    </body>
+    <label for="c">Coefficient c:</label>
+    <input type="number" id="c"><br>
+
+    <button onclick="findZeros()">Find the Zeros</button>
+    <button onclick="findVertex()">Find the Vertex</button>
+
+    <div id="quadratic_output"></div>
+</body>
 </html>
